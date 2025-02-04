@@ -89,10 +89,10 @@ myipv4routing::RouteInput(Ptr<const Packet> p,
     if (protocol == 6)
     {
         packet->PeekHeader(tcpheader);
-        if (tcpheader.GetFlags() & TcpHeader::SYN)
-        {
-            return false;
-        }
+        // if (tcpheader.GetFlags() & TcpHeader::SYN)
+        // {
+        //     return false;
+        // }
         // dstport = tcpheader.GetDestinationPort();
         // srcport = tcpheader.GetSourcePort();
     }
