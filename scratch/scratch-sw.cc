@@ -140,7 +140,7 @@ main(int argc, char* argv[])
     address.SetBase("10.1.3.0", "255.255.255.0");
     H3Iface = address.Assign(H3);
 
-    auto myrouting = new myipv4routing();
+    auto myrouting = Create<myipv4routing>();
 
     myrouting->AddNetworkRouteTo("10.1.0.0", "255.255.255.0", 1);
     myrouting->AddNetworkRouteTo("10.1.1.0", "255.255.255.0", 2);
